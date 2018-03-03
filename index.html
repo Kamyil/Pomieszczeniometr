@@ -1,26 +1,87 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app>
+<html lang="pl" ng-app="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pomieszczeniometr</title>
 
-    <style>
-    body{
-        background-color: #202020;
-        color: white;
-    }
+<link rel="stylesheet" href="css/style.css">
 
 
-
-    
-    </style>
 </head>
 <body>
-        <script src="angular.js"></script>
-        <input type="text" name="" id="" ng-model="text">
-    <h1>Twoja Stara i {{text}}</h1>
+       
 
+        <div class="container">
+            
+   
+     <div class="rooms" id="rooms">
+            <div class="room" id="r1">
+                <h3><input type="text" name="" id="" placeholder="Pokój 1"></h3>
+                <label for="">Długość:</label> &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height1"> m <br><br>
+                <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width1"> m <br><br>
+                Łącznie: <label for="" class="totalSingle">{{ height1*width1 }} m<sup>2</sup></label>
+            </div>
+         
+           <div class="room" id="r2">
+              <h3><input type="text" name="" id="" placeholder="Pokój 2"></h3>
+               <label for="">Długość:</label>&nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height2"> m <br><br>
+                <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width2"> m<br><br>
+                Łącznie:<label for="" class="totalSingle"> {{ height2*width2 }} m<sup>2</sup></label>
+           </div>
+           <div class="room" id="r3">
+              <h3><input type="text" name="" id="" placeholder="Pokój 3"></h3>
+              <label for=""> Długość:</label>  &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height3"> m <br><br>
+                <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width3"> m<br><br>
+               Łącznie:<label for="" class="totalSingle"> {{ height3*width3 }} m <sup>2</sup></label>
+           </div>
+           <div class="room" id="r4">
+                <h3><input type="text" name="" id="" placeholder="Pokój 4"></h3>
+                 <label for="">Długość:</label>&nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height4"> m <br><br>
+                  <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width4"> m<br><br>
+                 Łącznie: <label for="" class="totalSingle">{{ height4*width4 }} m<sup>2</sup></label>
+             </div>
+             <div class="room" id="r5">
+                <h3><input type="text" name="" id="" placeholder="Pokój 5"></h3>
+                <label for=""> Długość:</label>  &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height5"> m <br><br>
+                  <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width5"> m<br><br>
+                Łącznie:<label for="" class="totalSingle"> {{ height5*width5 }} m <sup>2</sup></label>
+             </div>
+           <button class="add">+</button>
+      
+
+     </div>
+          
+
+
+     <div class="view">
+         <div class="totalNumber">
+            <h3>Łączny metraż</h3><br><br><br><br><br><br>
+           <h1>{{  (height1*width1) + (height2*width2) + (height3*width3) + (height4*width4) + (height5*width5)}} m<sup>2</sup></h1>
+        </div>
+       
+       </div>
+
+
+
+
+
+
+
+
+       
+
+
+
+
+        </div>
+      
+
+
+ 
+        <script src="js/angular.js"></script>
+        <script src="js/popupform.js"></script>
+        <script src="js/addroom.js"></script>
 </body>
 </html>

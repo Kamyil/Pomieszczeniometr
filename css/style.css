@@ -1,0 +1,94 @@
+body{
+    background-color: #202020; 
+    color: white;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+}
+label{
+
+    margin-right: 2%;
+}
+input[type=text]{
+    background-color: #303030;
+    border: none;
+    font-size: 150%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+input[type=text]:hover{
+    background-color: #606060;
+
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+input[type=text]:focus{
+    background-color: gold;
+    color: #303030;
+    transition-duration: 0.1s;
+}
+input[type=number]{
+    background-color: #303030;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    width: 10%;
+}
+input[type=number]:hover{
+    background-color: #606060;
+
+    transition-duration: 0.1s;
+    cursor: pointer;
+
+}
+input[type=number]:focus{
+    background-color: gold;
+    color: #303030;
+    transition-duration: 0.1s;
+}
+.add{
+    background-color: goldenrod;
+    position: fixed;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: 700;
+    left: 60%;
+    bottom: 5%;
+    outline: none;
+    font-size: 150%;
+
+}
+.add:hover{
+    background-color: gold;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.view{
+    float: right;
+}
+.totalNumber{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 150%;
+    background-color: gold;
+    color: #202020;
+    border-radius: 5px;
+    padding: 1%;
+    height: 100%;
+    
+}
+.totalSingle{
+    background-color: gold;
+    color: #202020;
+    border-radius: 5px;
+    padding: 1%;
+}
