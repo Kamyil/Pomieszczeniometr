@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="">
+<html lang="pl" ng-app="my-app" ng-controller="myCtrl as $ctrl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,22 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/fontawesome-all.css">
+<link rel="stylesheet" href="css/fontawesome.css">
 
 
 </head>
 <body>
        
-
+        <script src="js/angular.js"></script>
         <div class="container">
             
    
-     <div class="rooms" id="rooms">
+     <div class="rooms" id="rooms" >
             <div class="room" id="r1">
-                <h3><input type="text" name="" id="" placeholder="Pokój 1"></h3>
-                <label for=""><i class="fas fa-arrows-alt-v"></i></label> &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height1"> m <br><br>
-                <label for=""><i class="fas fa-arrows-alt-v"></i></label> <input type="number" name="width" id="szerokosc" ng-model="width1"> m <br><br>
-                Łącznie: <label for="" class="totalSingle">{{ height1*width1 }} m<sup>2</sup></label>
+                <h3><input type="text" name="" id="" placeholder="Pole 1"></h3>
+                <label for=""><i class="fas fa-arrows-alt-h"></i></label> <input type="number" ng-model="height1"> m &nbsp;
+                <label for=""><i class="fas fa-arrows-alt-v"></i></label> <input type="number" ng-model="width1"> m <br><br>
+                <label for="" class="totalSingle">{{ height1*width1 }} m<sup>2</sup></label>
             </div>
          
            <!-- <div class="room" id="r2">
@@ -49,16 +50,22 @@
                   <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width5"> m<br><br>
                 Łącznie:<label for="" class="totalSingle"> {{ height5*width5 }} m <sup>2</sup></label>
              </div> -->
-           <button class="add">+</button>
-      
+           <!-- <button class="add">+</button> -->
+           <button type="button" ng-click="$ctrl.addElement()">Dodaj pole</button>
 
      </div>
           
 
 
      <div class="view">
+        <div class="squares">
+            <div id="square1"></div> 
+        </div>
+
+
+
          <div class="totalNumber">
-            <h3>Łączny metraż</h3><br><br><br><br><br><br>
+            <h3>Łączny metraż</h3>
            <h1>{{   height1*width1      }} m<sup>2</sup></h1>
         </div>
        
@@ -81,8 +88,8 @@
 
 
  
-        <script src="js/angular.js"></script>
-        <script src="js/popupform.js"></script>
+      
+     
         <script src="js/addroom.js"></script>
 </body>
 </html>
