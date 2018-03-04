@@ -7,6 +7,7 @@
     <title>Pomieszczeniometr</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fontawesome-all.css">
 
 
 </head>
@@ -19,12 +20,12 @@
      <div class="rooms" id="rooms">
             <div class="room" id="r1">
                 <h3><input type="text" name="" id="" placeholder="Pokój 1"></h3>
-                <label for="">Długość:</label> &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height1"> m <br><br>
-                <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width1"> m <br><br>
+                <label for=""><i class="fas fa-arrows-alt-v"></i></label> &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height1"> m <br><br>
+                <label for=""><i class="fas fa-arrows-alt-v"></i></label> <input type="number" name="width" id="szerokosc" ng-model="width1"> m <br><br>
                 Łącznie: <label for="" class="totalSingle">{{ height1*width1 }} m<sup>2</sup></label>
             </div>
          
-           <div class="room" id="r2">
+           <!-- <div class="room" id="r2">
               <h3><input type="text" name="" id="" placeholder="Pokój 2"></h3>
                <label for="">Długość:</label>&nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height2"> m <br><br>
                 <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width2"> m<br><br>
@@ -47,7 +48,7 @@
                 <label for=""> Długość:</label>  &nbsp;&nbsp;&nbsp; <input type="number" name="height" id="dlugosc" ng-model="height5"> m <br><br>
                   <label for="">Szerokość:</label> <input type="number" name="width" id="szerokosc" ng-model="width5"> m<br><br>
                 Łącznie:<label for="" class="totalSingle"> {{ height5*width5 }} m <sup>2</sup></label>
-             </div>
+             </div> -->
            <button class="add">+</button>
       
 
@@ -58,7 +59,7 @@
      <div class="view">
          <div class="totalNumber">
             <h3>Łączny metraż</h3><br><br><br><br><br><br>
-           <h1>{{  (height1*width1) + (height2*width2) + (height3*width3) + (height4*width4) + (height5*width5)}} m<sup>2</sup></h1>
+           <h1>{{   height1*width1      }} m<sup>2</sup></h1>
         </div>
        
        </div>

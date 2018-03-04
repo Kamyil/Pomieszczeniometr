@@ -1,5 +1,5 @@
 body{
-    background-color: #202020; 
+    background-color: #303030; 
     color: white;
     font-family: sans-serif;
 }
@@ -11,13 +11,16 @@ label{
     margin-right: 2%;
 }
 input[type=text]{
-    background-color: #303030;
-    border: none;
+    background-color: #191919;
+    border: 1px solid black;
     font-size: 150%;
     text-align: center;
     color: white;
     border-radius: 5px;
     outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
 }
 input[type=text]:hover{
     background-color: #606060;
@@ -27,18 +30,22 @@ input[type=text]:hover{
 }
 input[type=text]:focus{
     background-color: gold;
-    color: #303030;
+    color: #101010;
+    
     transition-duration: 0.1s;
 }
 input[type=number]{
-    background-color: #303030;
-    border: none;
-    font-size: 100%;
+    background-color: #191919;
+    border: 1px solid black;
+    font-size: 150%;
+    width: 10%;
     text-align: center;
     color: white;
     border-radius: 5px;
     outline: none;
-    width: 10%;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
 }
 input[type=number]:hover{
     background-color: #606060;
