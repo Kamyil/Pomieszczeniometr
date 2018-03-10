@@ -12,6 +12,10 @@ label{
 }
 input[type=text]{
     width: 70%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 1%;
     background-color: #191919;
     border: none;
     font-size: 150%;
@@ -39,6 +43,10 @@ input[type=text]:focus{
 }
 input[type=number]{
     background-color: #191919;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 1%;
     border: none;
     font-size: 150%;
     width: 15%;
@@ -70,20 +78,38 @@ input[type=number]:focus{
 button{
     background-color: #303030;
     color: white;
-    position: fixed;
-    border: none;
-    width: 120px;
+    width: 80px;
     height: 50px;
+    border: none;
+
     border-radius: 5px;
 font-weight: 700;
-    left: 15%;
-    bottom: 2%;
+  
+
     outline: none;
     font-size: 100%;
     border: 1px solid #202020;
 
 }
+.addSquareRoom{
+    left: 5%;
+    position: fixed;
+    bottom: 2%;
+}
+.addTriangleRoom{
+    left: 25%;
+    position: fixed;
+    bottom: 2%;
+}
+.deleteRoom{
+    width: 30px;
+    height: 30px;
+    font-weight: 300;
+    font-size: 80%;
+    float: right;
+ 
 
+}
 button:hover{
    
     background-color: #404040;
@@ -107,8 +133,8 @@ button:hover{
 }
 .totalNumber{
     position: fixed;
-    right: 0;
-    bottom: 0;
+right: 0;
+    bottom: 20vh;
     font-size: 150%;
 
  
@@ -118,17 +144,17 @@ button:hover{
     width: 50%;
 }
 .totalSingle{
-    background-color: gold;
-    color: #202020;
-    border-radius: 5px;
+    background-color: gold !important;
+    color: #202020 !important;
+    font-size: 125%;
     padding: 2%;
+    border-radius: 5px;
     font-weight: 700;
-    
 }
 
 .room{
-    /* padding-bottom: 5%;
-    border-bottom: 1px solid black; */
+    padding-bottom: 5%;
+    border-bottom: 1px solid black;
 
 }
 

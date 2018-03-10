@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="my-app" ng-controller="myCtrl as $ctrl">
+<html lang="pl" ng-app="roomApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,59 +9,48 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/fontawesome-all.css">
 <link rel="stylesheet" href="css/fontawesome.css">
-
+<script src="js/angular.js"></script>
 
 </head>
-<body>
+<body ng-init="getTotal()">
        
-        <script src="js/angular.js"></script>
-        <div class="container">
+       
+        <div class="container" ng-controller="roomsController">
             
    
-     <div class="rooms" id="rooms" >
-            <div class="room" id="r1">
-                <h3><input type="text" name="" id="" placeholder="Pole 1"></h3>
-                <label for=""><i class="fas fa-arrows-alt-h"></i></label> <input type="number" ng-model="height1" ng-init="height1='0'" value="0" > m &nbsp;
-                <label for=""><i class="fas fa-arrows-alt-v"></i></label> <input type="number" ng-model="width1" ng-init="width1='0'" value="0"> m <br><br>
-                <label for="" class="totalSingle">{{ (+height1*width1) }} m<sup>2</sup></label>
-            </div>
+    <div class="rooms">
+        <div ng-repeat="room in rooms" class="room">
+          <h3>   <input type="text"  tabindex="-1"  placeholder="{{room.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoom($index)">X</button>  
+            <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width" ng-change="getTotal()"> &nbsp;&nbsp;
+            <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height" ng-change="getTotal()"> <br><br>
+            <label class="totalSingle"> {{ room.width * room.height }} m<sup>2</sup></label>
          
+        </div>
+    </div>
          
-           <!-- <button class="add">+</button> -->
+    
+           <button class="addSquareRoom" ng-click="addNewSquareRoom()" >+ Square</button>
+           <!-- <button class="addTriangleRoom" ng-click="addNewTriangleRoom()">+ Triangle</button> -->
            <!-- <button type="button" ng-click="$ctrl.addElement()">Dodaj pole</button> -->
 
-     </div>
-          
+  
 
 
-     <div class="view">
+     <!-- <div class="view">
         <div class="squares">
             <div id="square1"></div> 
-        </div>
+        </div> -->
 
 
 
          <div class="totalNumber">
-            <h3>Łączny metraż</h3>
-           <h1>{{ (height1*width1)+ (height2*width2) + (height3*width3) +(height4*width4) +(height5*width5)+(height6*width6) }} m<sup>2</sup></h1>
+            <h4>Łączny metraż</h4>
+           <h2> {{total}} m<sup>2</sup></h2>
         </div>
        
-       </div>
-
-
-
-
-
-
-
-
-       
-
-
-
-
-        </div>
-      
+     
+         </div>
+          
 
 
  
