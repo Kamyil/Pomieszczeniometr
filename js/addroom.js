@@ -30,9 +30,13 @@ $scope.addNewTriangleRoom = function() {
 
 }
 
-$scope.getTotal= function(total){
-  total = $scope.total
-  return total;
+$scope.getTotal= function(arr){
+
+
+
+
+
+  
 }
 
 $scope.addNewSquareRoom = function() {
