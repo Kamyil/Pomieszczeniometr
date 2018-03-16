@@ -79,7 +79,7 @@ input[type=number]:focus{
     width: 100%;
 }
 button{
-    background-color: #303030;
+    background-color: transparent;
     color: white;
     width: 80px;
     height: 50px;
@@ -95,7 +95,7 @@ font-weight: 700;
 
 }
 .addSquareRoom{
-    left: 5%;
+    left: 20%;
     position: fixed;
     bottom: 2%;
 }
