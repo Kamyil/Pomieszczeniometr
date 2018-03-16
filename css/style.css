@@ -152,6 +152,11 @@ right: 0;
     font-weight: 700;
 }
 
+.total{
+    background-color: #353535 !important;
+    
+}
+
 .room{
     padding-bottom: 5%;
     border-bottom: 1px solid black;

@@ -3,56 +3,78 @@ let app = angular.module('roomApp',[]);
 
 
 app.controller('roomsController', ['$scope', function($scope){
-  let i = 1;
+ 
 
 $scope.rooms = [
 {
   name: 'Pole',
   width: 0,
-  height: 0
+  height: 0,
+  totalSingle: 0
 
-},
-{
+},{
   name: 'Pole',
   width: 0,
-  height: 0
+  height: 0,
+  totalSingle: 0
 
 }];
-$scope.total = ($scope.rooms[0].height*$scope.rooms[0].width)+($scope.rooms[1].height*$scope.rooms[1].width);
+$scope.total=0;
 
 $scope.addNewTriangleRoom = function() {
   $scope.rooms.push({
     name: 'Pole',
     width: 0,
-    height: 0
+    height: 0,
+    totalSingle: 0
   
   });
 
 }
 
-$scope.getTotal= function(arr){
+function getTotal(){
+  var total=0;
+  angular.forEach($scope.rooms, function(room) {
+     total += room.totalSingle;
+   });
+   return total;
+};
 
+$scope.$watch(function(newVal,oldVal){
+  if(newVal != undefined & newVal != oldVal){
+  $scope.total = getTotal();
+   }
+});
 
+$scope.totalSingle = function(room){
+  room.totalSingle = room.width * room.height;
 
-
-
-  
+  return room.totalSingle;
 }
 
+
+
+
+
+
 $scope.addNewSquareRoom = function() {
-  i++;
+
   
   $scope.rooms.push({
     name: 'Pole',
     width: 0,
-    height: 0
+    height: 0,
+    totalSingle: 0
 
   });
-  $scope.total += ($scope.rooms[i].height*$scope.rooms[i].width);
+
 }
 
 $scope.deleteRoom = function(){
   $scope.rooms.splice(this.$index, 1);
 }
 
-}])
+
+
+
+}]);

@@ -12,7 +12,7 @@
 <script src="js/angular.js"></script>
 
 </head>
-<body ng-init="getTotal()">
+<body>
        
        
         <div class="container" ng-controller="roomsController">
@@ -21,9 +21,9 @@
     <div class="rooms">
         <div ng-repeat="room in rooms" class="room">
           <h3>   <input type="text"  tabindex="-1"  placeholder="{{room.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoom($index)">X</button>  
-            <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width" ng-change="getTotal()"> &nbsp;&nbsp;
-            <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height" ng-change="getTotal()"> <br><br>
-            <label class="totalSingle"> {{ room.width * room.height }} m<sup>2</sup></label>
+            <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width"> &nbsp;&nbsp;
+            <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height"> <br><br>
+            <span class="totalSingle"> {{ totalSingle(room) }} m<sup>2</sup></span>
          
         </div>
     </div>
@@ -45,7 +45,7 @@
 
          <div class="totalNumber">
             <h4>Łączny metraż</h4>
-           <h2> {{total}} m<sup>2</sup></h2>
+           <h2> {{total}}  m<sup>2</sup></h2>
         </div>
        
      
