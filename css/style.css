@@ -30,10 +30,10 @@ box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
 
 }
 input[type=text]:hover{
-    background-color: #202020;
+    background-color: #252525;
 
-    transition-duration: 0.1s;
     cursor: pointer;
+    transition-duration: 0.1s;
 }
 input[type=text]:focus{
     border: 2px solid gold;
@@ -59,10 +59,13 @@ input[type=number]{
 box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
 }
 input[type=number]:hover{
-    background-color: #202020;
-
-    transition-duration: 0.1s;
+    background-color: #252525;
+/*     
+    -webkit-box-shadow: 0px 0px 56px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 56px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 56px 0px rgba(0,0,0,0.4); */
     cursor: pointer;
+    transition-duration: 0.1s;
 
 }
 input[type=number]:focus{
@@ -107,7 +110,7 @@ font-weight: 700;
     font-weight: 300;
     font-size: 80%;
     float: right;
- 
+    z-index: 99;
 
 }
 button:hover{
@@ -133,15 +136,15 @@ button:hover{
 }
 .totalNumber{
     position: fixed;
-right: 0;
+right: 10%;
     bottom: 20vh;
     font-size: 150%;
-
+    z-index: 1;
  
     border-radius: 5px;
-    padding: 1%;
+    
     height: 30%;
-    width: 50%;
+    width: 20%;
 }
 .totalSingle{
     background-color: gold !important;
