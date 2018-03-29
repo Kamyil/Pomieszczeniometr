@@ -1,7 +1,7 @@
 body{
     background-color: #353535;
     color: #f1f1f1;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 h1{
     text-align: center;
@@ -45,7 +45,7 @@ input[type=number]{
     -webkit-box-sizing: border-box;
     padding: 1%;
     border: none;
-    font-size: 150%;
+    font-size: 125%;
     width: 15%;
     text-align: center;
     color: white;
@@ -123,6 +123,7 @@ button:hover{
 .rooms{
     width: 50%;
     height: 100%;
+    margin-top: 10vh;
     /* border-right: 1px solid black; */
 }
 .view{
@@ -136,7 +137,7 @@ button:hover{
 right: 10%;
     bottom: 20vh;
     font-size: 150%;
-    z-index: 1;
+    
  
     border-radius: 5px;
     
@@ -147,9 +148,14 @@ right: 10%;
     background-color: gold !important;
     color: #202020 !important;
     font-size: 125%;
-    padding: 2%;
+    padding: 1%;
     border-radius: 5px;
     font-weight: 700;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+
 }
 
 .total{
@@ -164,8 +170,153 @@ right: 10%;
 }
 
 
+.more-info{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.print{
+    position: fixed;
+    right: 45px;
+    bottom: 10px;
+}
+
+select{
+    background-color: gold;
+    border: none;
+    outline: none;
+    color: #202020;
+    border-radius: 5px;
+    
+    font-weight: 700;
+    font-size: 100%;
+  
+    padding: 1%;
+}
+select:hover{
+    cursor:pointer;
+    background-color: goldenrod;
+    transition-duration: 0.2s;
+}
+option{
+    border-radius: 5px;
+    background-color: #202020;
+    color: #f1f1f1;
+}
+option:hover{
+    background-color: goldenrod;
+    transition-duration: 0.2s;
+    cursor:pointer;
+}
+
+.m-switcher{
+    width: 50%;
+    float: left;
+    position: relative;
+    bottom: 10vh;
+   
+}
 
 
+
+
+.meterActive{
+    background-color: gold;
+    color: #353535;
+}
+
+.meterDisabled{
+    background-color: #202020;
+    color: #f1f1f1;
+}
+.meterDisabled:hover{
+    background-color:goldenrod;
+    color: #353535;
+    transition-duration: 0.15s;
+    cursor: pointer;
+
+}
+
+/* .fa-print::after{
+    content: "Drukuj";
+    background-color: #202020;
+    color: #f1f1f1;
+    opacity: 0;
+    font-size: 80%;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 1%;
+    border-radius: 5px;
+    position: fixed;
+    position: fixed;
+    right: 35px;
+    bottom: 40px;
+}
+
+.fa-print:hover .fa-print::after{
+    opacity: 1;
+} */
+.fa-info-circle,.fa-print{
+font-size: 150%;
+}
+.fa-info-circle:hover,.fa-print:hover{
+   
+    color: gold;
+    transition-duration: 0.2s;
+    cursor:pointer;
+}
+.fa-info-circle:active,.fa-print:active{
+   
+    transform: scale(0.9);
+    transition-duration: 0.2s;
+    
+}
+
+.m3-icon{
+    width: 6%;
+  
+  position: relative;
+  top: 1.8vh;
+
+}
+
+.info-container-active{
+    display: block !important;
+}
+
+.info-container-disabled{
+    background-color: #202020;
+    width: 90vw;
+    height: 90vh;
+    top: 50%;
+    display: none;
+left: 50%;
+margin-top: -45vh; /* Negative half of height. */
+margin-left: -45vw; /* Negative half of width. */
+position: fixed;
+border-radius: 5px;
+text-align: center;
+font-size: 150%;
+z-index: 999999;
+}
+
+
+.version{
+    background-color: gold !important;
+    color: #202020 !important;
+   
+    padding: 1%;
+    border-radius: 5px;
+    font-weight: 700;
+   
+
+}
+.info-container ul li{
+    text-align: left;
+    font-size: 50%;
+  
+}
 
 
 

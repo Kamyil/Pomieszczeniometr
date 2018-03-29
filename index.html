@@ -16,23 +16,47 @@
        
        
         <div class="container" ng-controller="roomsController">
+            <div class="m-switcher">
+           <br>
+     <h3>Przełącz widok na</h3> 
+         <select ng-model="actualM">
+
+                <option value="M2" >metry kwadratowe (m<sup>2</sup>)</option>
+                <option value="M3">metry sześcienne (m<sup>3</sup>)</option>
+            </select>
             
-   
-    <div class="rooms">
-        <div ng-repeat="room in rooms" class="room">
+        </div>
+    <div class="rooms" ng-switch="actualM">
+     
+
+        <div  ng-repeat="room in rooms" class="room" ng-switch-when="M2" >
           <h3>   <input type="text"  tabindex="-1"  placeholder="{{room.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoom($index)">X</button>  
             <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width"> &nbsp;&nbsp;
             <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height"> <br><br>
-            <span class="totalSingle"> {{ totalSingle(room) }} m<sup>2</sup></span>
+            <div class="totalSingle"> {{ totalSingle(room) }} m<sup>2</sup></div>
          
         </div>
+
+        <!-- M3 -->
+
+        <div ng-repeat="roomM3 in roomsM3" class="room" ng-switch-when="M3">
+            <h3>   <input type="text"  tabindex="-1"  placeholder="{{roomM3.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoomM3($index)">X</button>  
+              <label><img class="m3-icon" src="assets\m3icon_x.png"></label> <input type="number" value="{{roomM3.x}}" ng-model="roomM3.x"> &nbsp;&nbsp;
+              <label><img class="m3-icon" src="assets\m3icon_y.png"></label> <input type="number" value="{{roomM3.y}}" ng-model="roomM3.y"> &nbsp;&nbsp;
+              <label><img class="m3-icon" src="assets\m3icon_z.png"></label> <input type="number" value="{{roomM3.z}}" ng-model="roomM3.z"> <br><br>
+
+              <div class="totalSingle"> {{ totalSingleM3(roomM3) }} m<sup>3</sup></div>
+           
+          </div>
+        
     </div>
          
-    
-           <button class="addSquareRoom" ng-click="addNewSquareRoom()" >+</button>
+        <div class="buttons" ng-switch="actualM">
+           <button class="addSquareRoom" ng-click="addNewSquareRoom()" ng-switch-when="M2">+</button>
+           <button class="addSquareRoom" ng-click="addNewSquareRoomM3()" ng-switch-when="M3">+</button>
            <!-- <button class="addTriangleRoom" ng-click="addNewTriangleRoom()">+ Triangle</button> -->
            <!-- <button type="button" ng-click="$ctrl.addElement()">Dodaj pole</button> -->
-
+        </div>
   
 
 
@@ -44,20 +68,48 @@
         <div class="map">
             <div class="fullmap"></div>
         </div>
-
-         <div class="totalNumber">
+<div class="totalNumbers" ng-switch="actualM">
+         <div class="totalNumber" ng-switch-when="M2">
             <h4>Łączny metraż</h4>
            <h1> {{total}}  m<sup>2</sup></h1>
         </div>
+
+        <div class="totalNumber" ng-switch-when="M3">
+                <h4>Łączny metraż</h4>
+               <h1> {{totalM3}}  m<sup>3</sup></h1>
+            </div>
        
-     
+        </div>
          </div>
           
 
 
  
       
-     
+     <div class="more-info">
+            <i class="fas fa-info-circle"></i> <!-- Button to toggle -->
+        <div class="info-container-disabled">
+            <h1>Informacje</h1>  <br>  
+            <h4>Pomieszczeniometr <b class="version">0.9.2</b></h4>
+            <h5>Główne zmiany:</h5>
+            <ul>
+                <li> Wprowadzono metry sześcienne</li>
+                <li> Wprowadzono możliwość wydrukowania strony</li>
+                <li> Wprowadzono panel informacyjny w którym będą pokazywane (narazie tylko) zmiany w każdym patchu</li>
+            </ul>  <br><br>
+            <p style="font-size: 80%;">Nie wiesz jak zamknąć to okno? Kliknij w ten sam przycisk, którym je włączyłeś/aś  (czyli ta ikonka "i" w prawym dolnym rogu)</p>  
+        </div>
+        
+        
+        
+    
+    
+    </div>
+     <div class="print"><i class="fas fa-print"></i></div>
         <script src="js/addroom.js"></script>
+        <script src="js/meterSwitcher.js"></script>
+        <script src="js/print.js"></script>
+        <script src="js/info.js"></script>
+
 </body>
 </html>
