@@ -68,15 +68,15 @@
         <div class="map">
             <div class="fullmap"></div>
         </div>
-<div class="totalNumbers" ng-switch="actualM">
+<div class="totalNumbers" ng-switch="actualM" ng-controller="totalsController">
          <div class="totalNumber" ng-switch-when="M2">
             <h4>Łączny metraż</h4>
-           <h1> {{total}}  m<sup>2</sup></h1>
+           <h1> {{totals.total}}  m<sup>2</sup></h1>
         </div>
 
         <div class="totalNumber" ng-switch-when="M3">
                 <h4>Łączny metraż</h4>
-               <h1> {{totalM3}}  m<sup>3</sup></h1>
+               <h1> {{totals.totalM3}}  m<sup>3</sup></h1>
             </div>
        
         </div>
