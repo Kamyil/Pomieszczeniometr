@@ -2,7 +2,7 @@ let app = angular.module('roomApp',[]);
 
 
 
-const ctrl = app.controller('roomsController', ['$scope', function($scope){
+app.controller('roomsController', ['$scope', function($scope){
 
 
 $scope.rooms = [
@@ -169,44 +169,3 @@ if(newVal != oldVal){
 
 
 }]);
-
-
-
-
-ctrl.directive('rectDesigner', function() {
-
-  function link(scope, el, attr) {
-
-    var svgwidth = 0,
-      svgheight = 0;
-
-    var svgContainer = d3.select(el[0])
-      .append('svg')
-      .attr('id', 'svgcontainer')
-      .attr({
-        width: svgwidth,
-        height: svgheight
-      });
-    // only append one rect
-    var rect = svgContainer
-      .append("rect")
-      .attr("id", "Rect")
-      .attr('transform', 'translate(' + svgwidth / 2 + ',' + svgheight / 2 + ')');
-
-    scope.$watchGroup(['room'], function(newValues) {
-
-      var width = newValues[0];
-      var height = newValues[1];
-
-      // now change it's width and height
-      rect.attr({
-        width: width,
-        height: height
-      });
-
-    }, true);
-  }
-  return {
-    link: link,
-  };
-});
