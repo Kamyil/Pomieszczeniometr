@@ -1,0 +1,71 @@
+@media only screen and (max-width: 720px) {
+   
+.m-switcher{
+    position: fixed  !important;
+    top: 0;
+    left: 1vw;
+}
+
+
+.totalNumber{
+    position: fixed;
+    top: 1px !important;
+    right: 1vw;
+    transform: scale(0.9);
+}
+
+.totalNumber h4{
+    margin-top: -2px;
+}
+.totalNumber h1{
+    margin-top: -2vh !important;
+    padding: 5% !important;
+    font-size: 100% !important;
+}
+
+.rooms{
+    margin-top: 25vh !important;
+    width: 100% !important;
+    max-height: 70vh !important;
+    overflow-y: auto;
+}
+
+.addSquareRoom{
+     top: 17vh !important;
+     left: 44vw !important;
+}
+
+
+.max720warning{
+    display: block !important;
+    width: 70%;
+    position: fixed;
+    bottom: -2px;
+    font-size: 75%;
+    font-weight: 700 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

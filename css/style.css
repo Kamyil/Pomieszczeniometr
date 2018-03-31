@@ -328,7 +328,9 @@ z-index: 999999;
 }
 
 
-
+.max720warning{
+    display: none;
+}
 
 
 
