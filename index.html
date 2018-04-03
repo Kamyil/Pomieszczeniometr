@@ -32,9 +32,9 @@
      
 
         <div  ng-repeat="room in rooms" class="room" ng-switch-when="M2" >
-          <h3>   <input type="text"  tabindex="-1"  placeholder="{{room.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoom($index)">X</button>  
-            <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width"> &nbsp;&nbsp;
-            <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height"> <br><br>
+          <h3>   <input type="text"  tabindex="-1"  placeholder="{{room.name}}" onclick="this.focus();this.select()"></h3>   <button class="deleteRoom" ng-click="deleteRoom($index)">X</button>  
+            <label><i class="fas fa-arrows-alt-h"></i></label> <input type="number" value="{{room.width}}" ng-model="room.width" onclick="this.focus();this.select()"> &nbsp;&nbsp;
+            <label><i class="fas fa-arrows-alt-v"></i></label> <input type="number" value="{{room.height}}" ng-model="room.height" onclick="this.focus();this.select()"> <br><br>
             <div class="totalSingle"> {{ totalSingle(room) }} m<sup>2</sup></div>
          
         </div>
@@ -42,10 +42,10 @@
         <!-- M3 -->
 
         <div ng-repeat="roomM3 in roomsM3" class="room" ng-switch-when="M3">
-            <h3>   <input type="text"  tabindex="-1"  placeholder="{{roomM3.name}}"></h3>   <button class="deleteRoom" ng-click="deleteRoomM3($index)">X</button>  
-              <label><img class="m3-icon" src="assets\m3icon_x.png"></label> <input type="number" value="{{roomM3.x}}" ng-model="roomM3.x"> &nbsp;&nbsp;
-              <label><img class="m3-icon" src="assets\m3icon_y.png"></label> <input type="number" value="{{roomM3.y}}" ng-model="roomM3.y"> &nbsp;&nbsp;
-              <label><img class="m3-icon" src="assets\m3icon_z.png"></label> <input type="number" value="{{roomM3.z}}" ng-model="roomM3.z"> <br><br>
+            <h3>   <input type="text"  tabindex="-1"  placeholder="{{roomM3.name}}" onclick="this.focus();this.select()"></h3>   <button class="deleteRoom" ng-click="deleteRoomM3($index)">X</button>  
+              <label><img class="m3-icon" src="assets\m3icon_x.png"></label> <input type="number" value="{{roomM3.x}}" ng-model="roomM3.x" onclick="this.focus();this.select()"> &nbsp;&nbsp;
+              <label><img class="m3-icon" src="assets\m3icon_y.png"></label> <input type="number" value="{{roomM3.y}}" ng-model="roomM3.y" onclick="this.focus();this.select()"> &nbsp;&nbsp;
+              <label><img class="m3-icon" src="assets\m3icon_z.png"></label> <input type="number" value="{{roomM3.z}}" ng-model="roomM3.z" onclick="this.focus();this.select()"> <br><br>
 
               <div class="totalSingle"> {{ totalSingleM3(roomM3) }} m<sup>3</sup></div>
            
@@ -112,6 +112,7 @@
         <script src="js/meterSwitcher.js"></script>
         <script src="js/print.js"></script>
         <script src="js/info.js"></script>
+        <script src="js/selectAllOnInput.js"></script>
 
 </body>
 </html>
